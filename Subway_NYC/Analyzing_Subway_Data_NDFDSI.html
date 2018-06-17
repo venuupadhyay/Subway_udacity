@@ -12036,7 +12036,7 @@ line 5...</p>
 <span class="k">def</span> <span class="nf">get_hourly_entries</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ENTRIESn&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ENTRIESn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ENTRIESn_hourly&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">d</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">df</span>
 
 <span class="n">turnstile_data</span><span class="o">=</span><span class="n">get_hourly_entries</span><span class="p">(</span><span class="n">turnstile_data</span><span class="p">)</span>
@@ -12067,7 +12067,7 @@ For this, you need to create a column called EXITSn_hourly and insert the differ
 <span class="k">def</span> <span class="nf">get_hourly_exits</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
     <span class="n">d</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;EXITSn&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;EXITSn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">df</span><span class="p">[</span><span class="s1">&#39;EXITSn_hourly&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">d</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">df</span>
 <span class="n">turnstile_data</span><span class="o">=</span><span class="n">get_hourly_exits</span><span class="p">(</span><span class="n">turnstile_data</span><span class="p">)</span>
 </pre></div>
